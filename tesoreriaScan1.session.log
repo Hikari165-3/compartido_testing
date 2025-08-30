@@ -1,0 +1,204 @@
+/*C2*/SET SCHEMA PUBLIC
+SET FILES LOG TRUE
+/*C4*/SET SCHEMA PUBLIC
+DELETE FROM SESSION WHERE SESSIONID=1756525951283
+INSERT INTO SESSION VALUES(1756525951283,'Sesi\u00f3n sin Nombre','2025-08-30 00:20:35.578972')
+COMMIT
+/*C16*/SET SCHEMA PUBLIC
+SET SCHEMA "PUBLIC"
+DISCONNECT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_CHANNEL VALUES(3,'push.services.mozilla.com',443,'','2025-08-30 00:20:40.457000',NULL,NULL)
+COMMIT
+/*C1*/SET SCHEMA SYSTEM_LOBS
+INSERT INTO LOB_IDS VALUES(4,111,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 5
+COMMIT
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=3
+INSERT INTO BLOCKS VALUES(3,1,0)
+INSERT INTO BLOCKS VALUES(4,2147483643,0)
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=3
+INSERT INTO LOBS VALUES(3,1,0,4)
+COMMIT
+/*C13*/INSERT INTO WEBSOCKET_MESSAGE VALUES(1,3,'2025-08-30 00:20:40.465000',1,4,NULL,111,TRUE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=4
+INSERT INTO LOB_IDS VALUES(4,111,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(5,166,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 6
+COMMIT
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=4
+INSERT INTO BLOCKS VALUES(4,1,0)
+INSERT INTO BLOCKS VALUES(5,2147483642,0)
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=4
+INSERT INTO LOBS VALUES(4,1,0,5)
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(2,3,'2025-08-30 00:20:40.687000',1,5,NULL,166,FALSE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=5
+INSERT INTO LOB_IDS VALUES(5,166,1,40)
+COMMIT
+/*C3*/SET SCHEMA PUBLIC
+INSERT INTO HISTORY VALUES(158,1756525951283,1,200,1756527772572,11538,'POST','https://ads.mozilla.org/v1/ads','POST https://ads.mozilla.org/v1/ads HTTP/1.1\u000d\u000ahost: ads.mozilla.org\u000d\u000aUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0\u000d\u000aAccept: */*\u000d\u000aAccept-Language: es-AR,es;q=0.8,en-US;q=0.5,en;q=0.3\u000d\u000acontent-type: application/json\u000d\u000aContent-Length: 223\u000d\u000aConnection: keep-alive\u000d\u000aPriority: u=4\u000d\u000a\u000d\u000a','7b22636f6e746578745f6964223a2266393665643465382d333662652d346465312d623364352d663639366636383065666534222c22706c6163656d656e7473223a5b7b22706c6163656d656e74223a226e65777461625f74696c655f31222c22636f756e74223a317d2c7b22706c6163656d656e74223a226e65777461625f74696c655f32222c22636f756e74223a317d2c7b22706c6163656d656e74223a226e65777461625f74696c655f33222c22636f756e74223a317d5d2c22626c6f636b73223a5b22225d2c2263726564656e7469616c73223a226f6d6974227d','HTTP/1.1 200 OK\u000d\u000acontent-type: application/json\u000d\u000astrict-transport-security: max-age=31536000\u000d\u000adate: Sat, 30 Aug 2025 04:23:06 GMT\u000d\u000aContent-Length: 59\u000d\u000avia: 1.1 google\u000d\u000aAlt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000\u000d\u000a\u000d\u000a','7b226e65777461625f74696c655f31223a5b5d2c226e65777461625f74696c655f32223a5b5d2c226e65777461625f74696c655f33223a5b5d7d0a',NULL,'',TRUE)
+COMMIT
+/*C8*/SET SCHEMA PUBLIC
+INSERT INTO TAG VALUES(82,158,'JSON')
+COMMIT
+/*C10*/SET SCHEMA PUBLIC
+DELETE FROM PARAM WHERE PARAMID=1 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='content-type' AND USED=2 AND FLAGS='' AND VALS='application/json'
+INSERT INTO PARAM VALUES(1,'ads.mozilla.org:443','header','content-type',3,'','application/json')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=2 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='strict-transport-security' AND USED=2 AND FLAGS='' AND VALS='max-age=31536000'
+INSERT INTO PARAM VALUES(2,'ads.mozilla.org:443','header','strict-transport-security',3,'','max-age=31536000')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=3 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='date' AND USED=2 AND FLAGS='' AND VALS='Sat%2C 30 Aug 2025 03:52:43 GMT,Sat%2C 30 Aug 2025 04:07:56 GMT'
+INSERT INTO PARAM VALUES(3,'ads.mozilla.org:443','header','date',3,'','Sat%2C 30 Aug 2025 03:52:43 GMT,Sat%2C 30 Aug 2025 04:07:56 GMT,Sat%2C 30 Aug 2025 04:23:06 GMT')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=4 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='Content-Length' AND USED=2 AND FLAGS='' AND VALS='59'
+INSERT INTO PARAM VALUES(4,'ads.mozilla.org:443','header','Content-Length',3,'','59')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=5 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='via' AND USED=2 AND FLAGS='' AND VALS='1.1 google'
+INSERT INTO PARAM VALUES(5,'ads.mozilla.org:443','header','via',3,'','1.1 google')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=6 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='Alt-Svc' AND USED=2 AND FLAGS='' AND VALS='h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000'
+INSERT INTO PARAM VALUES(6,'ads.mozilla.org:443','header','Alt-Svc',3,'','h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000,h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000')
+COMMIT
+/*C5*/SET SCHEMA PUBLIC
+INSERT INTO ALERT VALUES(205,0,10021,'Falta encabezado X-Content-Type-Options',1,2,'La cabecera Anti-MIME-Sniffing X-Content-Type-Options no se ha establecido en ''nosniff''. Esto permite que las versiones anteriores de Internet Explorer y Chrome realicen MIME-sniffing en el cuerpo de la respuesta, lo que puede provocar que el cuerpo d\u00e9 la respuesta se interprete y se muestre como un tipo de contenido distinto del tipo de contenido declarado. Las versiones actuales (principios de 2014) y heredadas de Firefox utilizar\u00e1n el tipo de contenido declarado (si se establece uno), en lugar de realizar MIME-sniffing.','https://ads.mozilla.org/v1/ads','x-content-type-options','Este problema a\u00fan se aplica a las p\u00e1ginas de tipo error (401, 403, 500, etc.), ya que esas p\u00e1ginas a menudo se ven afectadas por problemas de inyecci\u00f3n, en cuyo caso a\u00fan existe la preocupaci\u00f3n de que los navegadores husmeen las p\u00e1ginas lejos de su tipo de contenido real.\u000aEn el umbral \u00abAlto\u00bb esta regla de an\u00e1lisis no alertar\u00e1 sobre respuestas de error del cliente o servidor.','Aseg\u00farese de que la aplicaci\u00f3n/servidor web establece el encabezado Content-Type adecuadamente, y que establece el encabezado X-Content-Type-Options a ''nosniff'' para todas las p\u00e1ginas web.\u000aSi es posible, aseg\u00farese de que el usuario final utiliza un navegador web moderno y compatible con los est\u00e1ndares que no realiza MIME-sniffing en absoluto, o que puede ser dirigido por la aplicaci\u00f3n web/servidor web para que no realice MIME-sniffing.','https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\u000ahttps://owasp.org/www-community/Security_Headers',158,158,'','',693,15,3,'','10021')
+COMMIT
+/*C6*/SET SCHEMA PUBLIC
+INSERT INTO ALERT_TAG VALUES(960,205,'CWE-693','https://cwe.mitre.org/data/definitions/693.html')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(961,205,'OWASP_2021_A05','https://owasp.org/Top10/A05_2021-Security_Misconfiguration/')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(962,205,'OWASP_2017_A06','https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(963,205,'POLICY_QA_STD','')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(964,205,'POLICY_PENTEST','')
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(6,0,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 7
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(3,3,'2025-08-30 00:25:40.769000',9,6,NULL,0,FALSE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=6
+INSERT INTO LOB_IDS VALUES(6,0,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(7,0,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 8
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(4,3,'2025-08-30 00:25:40.773000',10,7,NULL,0,TRUE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=7
+INSERT INTO LOB_IDS VALUES(7,0,1,40)
+COMMIT
+SET SCHEMA PUBLIC
+DELETE FROM WEBSOCKET_CHANNEL WHERE CHANNEL_ID=3
+INSERT INTO WEBSOCKET_CHANNEL VALUES(3,'push.services.mozilla.com',443,'','2025-08-30 00:20:40.457000','2025-08-30 00:25:40.885000',NULL)
+COMMIT
+INSERT INTO WEBSOCKET_CHANNEL VALUES(4,'push.services.mozilla.com',443,'','2025-08-30 00:25:57.399000',NULL,NULL)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(8,111,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 9
+COMMIT
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=5
+INSERT INTO BLOCKS VALUES(5,1,0)
+INSERT INTO BLOCKS VALUES(6,2147483641,0)
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=5
+INSERT INTO LOBS VALUES(5,1,0,8)
+COMMIT
+/*C13*/INSERT INTO WEBSOCKET_MESSAGE VALUES(1,4,'2025-08-30 00:25:57.405000',1,8,NULL,111,TRUE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=8
+INSERT INTO LOB_IDS VALUES(8,111,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(9,166,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 10
+COMMIT
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=6
+INSERT INTO BLOCKS VALUES(6,1,0)
+INSERT INTO BLOCKS VALUES(7,2147483640,0)
+DELETE FROM BLOCKS WHERE BLOCK_ADDR=6
+INSERT INTO LOBS VALUES(6,1,0,9)
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(2,4,'2025-08-30 00:25:57.638000',1,9,NULL,166,FALSE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=9
+INSERT INTO LOB_IDS VALUES(9,166,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(10,0,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 11
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(3,4,'2025-08-30 00:30:57.638000',9,10,NULL,0,FALSE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=10
+INSERT INTO LOB_IDS VALUES(10,0,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(11,0,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 12
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(4,4,'2025-08-30 00:30:57.641000',10,11,NULL,0,TRUE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=11
+INSERT INTO LOB_IDS VALUES(11,0,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(12,0,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 13
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(5,4,'2025-08-30 00:35:57.872000',9,12,NULL,0,FALSE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=12
+INSERT INTO LOB_IDS VALUES(12,0,1,40)
+COMMIT
+/*C1*/INSERT INTO LOB_IDS VALUES(13,0,0,40)
+ALTER SEQUENCE SYSTEM_LOBS.LOB_ID RESTART WITH 14
+COMMIT
+/*C13*/SET SCHEMA PUBLIC
+INSERT INTO WEBSOCKET_MESSAGE VALUES(6,4,'2025-08-30 00:35:57.874000',10,13,NULL,0,TRUE)
+SET SCHEMA SYSTEM_LOBS
+DELETE FROM LOB_IDS WHERE LOB_ID=13
+INSERT INTO LOB_IDS VALUES(13,0,1,40)
+COMMIT
+/*C3*/INSERT INTO HISTORY VALUES(159,1756525951283,1,200,1756528688130,11650,'POST','https://ads.mozilla.org/v1/ads','POST https://ads.mozilla.org/v1/ads HTTP/1.1\u000d\u000ahost: ads.mozilla.org\u000d\u000aUser-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0\u000d\u000aAccept: */*\u000d\u000aAccept-Language: es-AR,es;q=0.8,en-US;q=0.5,en;q=0.3\u000d\u000acontent-type: application/json\u000d\u000aContent-Length: 223\u000d\u000aConnection: keep-alive\u000d\u000aPriority: u=4\u000d\u000a\u000d\u000a','7b22636f6e746578745f6964223a2266393665643465382d333662652d346465312d623364352d663639366636383065666534222c22706c6163656d656e7473223a5b7b22706c6163656d656e74223a226e65777461625f74696c655f31222c22636f756e74223a317d2c7b22706c6163656d656e74223a226e65777461625f74696c655f32222c22636f756e74223a317d2c7b22706c6163656d656e74223a226e65777461625f74696c655f33222c22636f756e74223a317d5d2c22626c6f636b73223a5b22225d2c2263726564656e7469616c73223a226f6d6974227d','HTTP/1.1 200 OK\u000d\u000acontent-type: application/json\u000d\u000astrict-transport-security: max-age=31536000\u000d\u000adate: Sat, 30 Aug 2025 04:38:21 GMT\u000d\u000aContent-Length: 59\u000d\u000avia: 1.1 google\u000d\u000aAlt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000\u000d\u000a\u000d\u000a','7b226e65777461625f74696c655f31223a5b5d2c226e65777461625f74696c655f32223a5b5d2c226e65777461625f74696c655f33223a5b5d7d0a',NULL,'',TRUE)
+COMMIT
+/*C10*/DELETE FROM PARAM WHERE PARAMID=1 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='content-type' AND USED=3 AND FLAGS='' AND VALS='application/json'
+INSERT INTO PARAM VALUES(1,'ads.mozilla.org:443','header','content-type',4,'','application/json')
+COMMIT
+/*C8*/INSERT INTO TAG VALUES(83,159,'JSON')
+COMMIT
+/*C10*/DELETE FROM PARAM WHERE PARAMID=2 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='strict-transport-security' AND USED=3 AND FLAGS='' AND VALS='max-age=31536000'
+INSERT INTO PARAM VALUES(2,'ads.mozilla.org:443','header','strict-transport-security',4,'','max-age=31536000')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=3 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='date' AND USED=3 AND FLAGS='' AND VALS='Sat%2C 30 Aug 2025 03:52:43 GMT,Sat%2C 30 Aug 2025 04:07:56 GMT,Sat%2C 30 Aug 2025 04:23:06 GMT'
+INSERT INTO PARAM VALUES(3,'ads.mozilla.org:443','header','date',4,'','Sat%2C 30 Aug 2025 03:52:43 GMT,Sat%2C 30 Aug 2025 04:07:56 GMT,Sat%2C 30 Aug 2025 04:23:06 GMT,Sat%2C 30 Aug 2025 04:38:21 GMT')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=4 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='Content-Length' AND USED=3 AND FLAGS='' AND VALS='59'
+INSERT INTO PARAM VALUES(4,'ads.mozilla.org:443','header','Content-Length',4,'','59')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=5 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='via' AND USED=3 AND FLAGS='' AND VALS='1.1 google'
+INSERT INTO PARAM VALUES(5,'ads.mozilla.org:443','header','via',4,'','1.1 google')
+COMMIT
+DELETE FROM PARAM WHERE PARAMID=6 AND SITE='ads.mozilla.org:443' AND TYPE='header' AND NAME='Alt-Svc' AND USED=3 AND FLAGS='' AND VALS='h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000,h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000'
+INSERT INTO PARAM VALUES(6,'ads.mozilla.org:443','header','Alt-Svc',4,'','h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000,h3=":443"; ma=2592000%2Ch3-29=":443"; ma=2592000')
+COMMIT
+/*C5*/INSERT INTO ALERT VALUES(206,0,10021,'Falta encabezado X-Content-Type-Options',1,2,'La cabecera Anti-MIME-Sniffing X-Content-Type-Options no se ha establecido en ''nosniff''. Esto permite que las versiones anteriores de Internet Explorer y Chrome realicen MIME-sniffing en el cuerpo de la respuesta, lo que puede provocar que el cuerpo d\u00e9 la respuesta se interprete y se muestre como un tipo de contenido distinto del tipo de contenido declarado. Las versiones actuales (principios de 2014) y heredadas de Firefox utilizar\u00e1n el tipo de contenido declarado (si se establece uno), en lugar de realizar MIME-sniffing.','https://ads.mozilla.org/v1/ads','x-content-type-options','Este problema a\u00fan se aplica a las p\u00e1ginas de tipo error (401, 403, 500, etc.), ya que esas p\u00e1ginas a menudo se ven afectadas por problemas de inyecci\u00f3n, en cuyo caso a\u00fan existe la preocupaci\u00f3n de que los navegadores husmeen las p\u00e1ginas lejos de su tipo de contenido real.\u000aEn el umbral \u00abAlto\u00bb esta regla de an\u00e1lisis no alertar\u00e1 sobre respuestas de error del cliente o servidor.','Aseg\u00farese de que la aplicaci\u00f3n/servidor web establece el encabezado Content-Type adecuadamente, y que establece el encabezado X-Content-Type-Options a ''nosniff'' para todas las p\u00e1ginas web.\u000aSi es posible, aseg\u00farese de que el usuario final utiliza un navegador web moderno y compatible con los est\u00e1ndares que no realiza MIME-sniffing en absoluto, o que puede ser dirigido por la aplicaci\u00f3n web/servidor web para que no realice MIME-sniffing.','https://learn.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/compatibility/gg622941(v=vs.85)\u000ahttps://owasp.org/www-community/Security_Headers',159,159,'','',693,15,3,'','10021')
+COMMIT
+/*C6*/INSERT INTO ALERT_TAG VALUES(965,206,'CWE-693','https://cwe.mitre.org/data/definitions/693.html')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(966,206,'OWASP_2021_A05','https://owasp.org/Top10/A05_2021-Security_Misconfiguration/')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(967,206,'OWASP_2017_A06','https://owasp.org/www-project-top-ten/2017/A6_2017-Security_Misconfiguration.html')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(968,206,'POLICY_QA_STD','')
+COMMIT
+INSERT INTO ALERT_TAG VALUES(969,206,'POLICY_PENTEST','')
+COMMIT
